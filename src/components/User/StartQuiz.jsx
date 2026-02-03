@@ -146,9 +146,19 @@ export default function StartQuiz() {
             <h2 className="text-2xl font-display font-bold text-foreground mb-2 text-center">
               Select Category
             </h2>
-            <p className="text-muted-foreground text-center mb-8">
+            <p className="text-muted-foreground text-center mb-6">
               What would you like to learn today?
             </p>
+
+            <div className="mb-6">
+              <Input
+                type="text"
+                placeholder="Search categories..."
+                value={searchCategory}
+                onChange={(e) => setSearchCategory(e.target.value)}
+                className="w-full"
+              />
+            </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
               {filteredCategories.map((category) => (
